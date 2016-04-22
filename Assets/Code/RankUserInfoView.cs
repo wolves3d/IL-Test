@@ -18,10 +18,10 @@ public class RankUserInfoView : MonoBehaviour
 	
 	}
 
-	public void SetValues(uint rank, string name, uint score)
+	public void SetValues(int rank, string name, int score)
 	{
 		rankLabel.text = rank.ToString();
 		userNameLabel.text = name;
-		scoreLabel.text = score.ToString();
+		scoreLabel.text = "Score: " + score.ToString();
 	}
 }
