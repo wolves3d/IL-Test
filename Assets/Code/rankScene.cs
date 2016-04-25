@@ -19,6 +19,7 @@ public class rankScene : MonoBehaviour {
 	public Text userNameObject;
 	public Text userRankObject;
 	public Text userScoreObject;
+	public Text userPercentage;
 
 	// Use this for initialization
 	void Start ()
@@ -56,6 +57,13 @@ public class rankScene : MonoBehaviour {
 		userNameObject.text = m_rankData.GetUserName();
 		userRankObject.text = m_rankData.GetUserRank().ToString();
 		userScoreObject.text = m_rankData.GetUserScore().ToString();
+		
+		// User percentage pos
+		int percentValue = m_rankData.GetUserPrecent();
+		userPercentage.text = percentValue.ToString() + "%";
+		float percentWidth = -290 + (580 * ((float)percentValue / 100)); // FIXME: magic number
+		Vector3 oldPos = userPercentage.transform.localPosition;
+		userPercentage.gameObject.transform.localPosition = new Vector3(percentWidth, oldPos.y, oldPos.z);
 
 		// Leaders -------------------------------------------------------------
 		int leaderCount = m_rankData.LeadersCount();

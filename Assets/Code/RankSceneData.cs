@@ -67,6 +67,7 @@ public class RankSceneData
 			m_userName = info.name;
 			m_userScore = info.score;
 			m_userRank = Random.Range(1024, 65536);
+			m_userPercent = Random.Range(5, 95);
 		}
 		else
 		{
@@ -157,9 +158,15 @@ public class RankSceneData
 		return m_userScore;
 	}
 
+	public int GetUserPrecent()
+	{
+		return m_userPercent;
+	}
+
 	string m_userName;	
 	int	m_userRank;
 	int m_userScore;
+	int m_userPercent;
 
 	int m_modeID;
 	int m_statusID;
