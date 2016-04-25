@@ -146,6 +146,25 @@ public class rankScene : MonoBehaviour {
 		UpdateViews();
 	}
 
+	public void OnEasyFilter()
+	{
+		m_rankData.SetFilter(0);
+		UpdateViews();
+	}
+
+	public void OnMediumFilter()
+	{
+		m_rankData.SetFilter(1);
+		UpdateViews();
+	}
+
+	public void OnHardFilter()
+	{
+		m_rankData.SetFilter(2);
+		UpdateViews();
+	}
+
+
 	RankSceneData m_rankData;
 	List <RankUserInfoView> m_leaderViewList;
 }

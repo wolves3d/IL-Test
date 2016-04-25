@@ -10,9 +10,9 @@ public class RankSceneData
 			name = n;
 			score = s;
 
-			// fake
+			// FIXME: fake
 			statusID = status;
-			modeID = Random.Range(0, 2);
+			modeID = Random.Range(0, 3);
 		}
 
 		public string name;
